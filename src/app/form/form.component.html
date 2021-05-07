@@ -1,0 +1,24 @@
+<h2>Create candidate</h2>
+<div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input [(ngModel)]="candidate.name" type="text" class="form-control" id="name">
+  </div>
+  <div class="mb-3">
+    <label for="surname" class="form-label">Surname</label>
+    <input [(ngModel)]="candidate.surname"type="text" class="form-control" id="surname">
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input [(ngModel)]="candidate.phone" type="number" class="form-control" id="phone" maxlength="10">
+  </div>
+  <div class="mb-3">
+    <label for="date" class="form-label">Date</label>
+    <input [(ngModel)]="candidate.date" type="date" class="form-control" id="date">
+  </div>
+  <div class="mb-3">
+    <label for="rating" class="form-label">Rating</label>
+    <input [(ngModel)]="candidate.rating" type="number" class="form-control" id="rating" max="10" min="1">
+  </div>
+  <button class="btn btn-primary btn-block" (click)="saveCandidate()">Save</button>
+</div>

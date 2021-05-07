@@ -1,0 +1,24 @@
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">SURNAME</th>
+      <th scope="col">PHONE</th>
+      <th scope="col">DATE</th>
+      <th scope="col">RATING</th>
+      <th scope="col">OPTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons">
+      <td>{{person.id}}</td>
+      <td>{{person.name}}</td>
+      <td>{{person.surname}}</td>
+      <td>{{person.phone}}</td>
+      <td>{{person.date}}</td>
+      <td>{{person.rating}}</td>
+      <td><a class="btn btn-primary btn-sm" routerLink="/form/{{person.id}}">Show/Update</a><a class="btn btn-warning btn-sm" (click) ="deleteCandidate(person.id)">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
